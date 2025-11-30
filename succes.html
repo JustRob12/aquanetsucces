@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful - AquaNet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0369a1 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out 0.2s both;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .checkmark {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+
+        .checkmark::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 25px;
+            background: white;
+            left: 20px;
+            top: 35px;
+            transform: rotate(45deg);
+            animation: drawLine 0.3s ease-out 0.5s both;
+        }
+
+        .checkmark::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 15px;
+            background: white;
+            left: 30px;
+            top: 28px;
+            transform: rotate(-45deg);
+            animation: drawLine 0.3s ease-out 0.7s both;
+        }
+
+        @keyframes drawLine {
+            from {
+                height: 0;
+            }
+            to {
+                height: var(--height, 25px);
+            }
+        }
+
+        h1 {
+            color: #1e293b;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            animation: fadeIn 0.5s ease-out 0.4s both;
+        }
+
+        .message {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease-out 0.6s both;
+        }
+
+        .aquanet-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+            animation: fadeIn 0.5s ease-out 0.8s both;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: left;
+            animation: fadeIn 0.5s ease-out 1s both;
+        }
+
+        .info-box p {
+            color: #475569;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .info-box strong {
+            color: #0ea5e9;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 14px;
+            }
+
+            .success-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .checkmark {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">
+            <div class="checkmark"></div>
+        </div>
+        
+        <h1>Registration Successful!</h1>
+        
+        <p class="message">
+            Congratulations! You have been successfully registered in
+        </p>
+        
+        <div class="aquanet-badge">
+            AquaNet
+        </div>
+        
+        <div class="info-box">
+            <p><strong>Welcome to AquaNet!</strong></p>
+            <p>You can now access all features of the water quality monitoring system.</p>
+        </div>
+    </div>
+</body>
+</html>
+
