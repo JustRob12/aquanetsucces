@@ -74,33 +74,48 @@
         .checkmark::before {
             content: '';
             position: absolute;
-            width: 3px;
-            height: 25px;
+            width: 4px;
+            height: 20px;
             background: white;
-            left: 20px;
-            top: 35px;
+            left: 18px;
+            top: 25px;
             transform: rotate(45deg);
-            animation: drawLine 0.3s ease-out 0.5s both;
+            border-radius: 2px;
+            animation: drawLine1 0.4s ease-out 0.5s both;
         }
 
         .checkmark::after {
             content: '';
             position: absolute;
-            width: 3px;
-            height: 15px;
+            width: 4px;
+            height: 12px;
             background: white;
-            left: 30px;
-            top: 28px;
+            left: 26px;
+            top: 20px;
             transform: rotate(-45deg);
-            animation: drawLine 0.3s ease-out 0.7s both;
+            border-radius: 2px;
+            animation: drawLine2 0.4s ease-out 0.7s both;
         }
 
-        @keyframes drawLine {
+        @keyframes drawLine1 {
             from {
                 height: 0;
+                opacity: 0;
             }
             to {
-                height: var(--height, 25px);
+                height: 20px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes drawLine2 {
+            from {
+                height: 0;
+                opacity: 0;
+            }
+            to {
+                height: 12px;
+                opacity: 1;
             }
         }
 
@@ -194,6 +209,20 @@
                 width: 40px;
                 height: 40px;
             }
+
+            .checkmark::before {
+                width: 3px;
+                height: 16px;
+                left: 14px;
+                top: 20px;
+            }
+
+            .checkmark::after {
+                width: 3px;
+                height: 10px;
+                left: 20px;
+                top: 16px;
+            }
         }
     </style>
 </head>
@@ -203,7 +232,7 @@
             <div class="checkmark"></div>
         </div>
         
-        <h1>Registration Submitted!</h1>
+        <h1>Registration Successful!</h1>
         
         <p class="message">
             Your registration has been submitted. Please wait for admin approval.
